@@ -1,0 +1,73 @@
+<!-- 
+  This tutorial challenge was easy to define its layout, with the initial plan of having a MAIN element containing 2 different SECTION elements. 
+
+  However, there were 3 issues that surfaced. 
+  
+    1. I made the mistake of applying FLEX properties onto MAIN instead of BODY and struggled with centering it. 
+  
+    2. The BODY > MAIN > SECTION structure meant the flex properties couldn't move both SECTION elements and it wasn't the "root" parent (i.e. which is MAIN), but 
+       that didn't matter due to the first issue.
+
+    3. The screen solution of my MBP 16" created the impression that JUSTIFY-CONTENT didn't work, as the box didn't move downwards from the top. Shifted Chrome browser to my
+       27" monitor and the effect was actually working fine.
+-->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+  <title>Frontend Mentor | QR code component</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;700&display=swap" rel="stylesheet">
+  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
+  <style>
+    /* .attribution { font-size: 11px; text-align: center; }
+    .attribution a { color: hsl(228, 45%, 44%); } */
+    html, body { 
+      background-color:rgb(221, 236, 255); 
+      font-family: 'Outfit', sans-serif;
+      width: 100%;
+      height: 100%;
+      display: inline-flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+    }
+    main {
+      border-radius: 4%; 
+      background-color: #FFFFFF;
+      padding: 25px;
+      width: 576px;
+    }
+    .message {
+      width: 526px;
+      margin: 0 auto;
+      text-align: center;
+    }
+    .rounded-edges-inner { 
+      border-radius: 2%; 
+    }
+    h1 { 
+      font-size: 2.5em; 
+    }
+    p { 
+      font-size: 1.5em; 
+      color: rgb(126, 126, 126);
+    }
+  </style>
+</head>
+<body>
+  <main>
+    <section>
+      <img class="rounded-edges-inner" src="images/image-qr-code.png" alt="qr-code-img">
+    </section>
+    <section class="message">
+      <h1>Improve your front-end skills by building projects</h1>
+      <p>Scan the QR code to visit Frontend Mentor and take your coding skills to the next level</p>
+    </section>
+  </main>
+</body>
+</html>
